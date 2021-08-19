@@ -27,7 +27,6 @@ class ItemsAdapter(private val context: Context, private var list: List<Affirmat
 
     class ItemHolder(var itemBinding: ListItemBinding) :
         RecyclerView.ViewHolder(itemBinding.root) {
-        @SuppressLint("UseCompatLoadingForDrawables")
         fun bindData(affirmation: Affirmation, context: Context) {
             itemBinding.affirmationString.text = context.getString(affirmation.stringResourceId)
             itemBinding.imageView.setImageResource(affirmation.imageResourceId)
